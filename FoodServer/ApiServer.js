@@ -6,9 +6,9 @@
  app.use(cors());
  app.use(express.json());
  app.use(express.urlencoded({extended:true}));
- const port = process.env.PORT||4000;
+ const port = process.env.PORT || 4000;
  app.listen(port,()=>{
-        console.log('Server is running at 3000');
+        console.log(`Server is running at ${port}`);
  })
  app.use('/Images', express.static(path.join(__dirname, 'Images')));
  app.get('/',(req,res)=>{
